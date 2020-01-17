@@ -1,0 +1,30 @@
+git checkout -b 分支名  //创建分支并跳转到切换到分支，只切换的去除-b
+git brach -d 删除分支
+
+
+一 第一种合并方法 meger
+创建完分支修改要提交，转到主干master修改完要提交
+最后再是git merge xxx 将xxx合并到master中
+
+二 第二种 Rebase
+前提在checkout到a分支
+git rebase b 后
+a就合并到b上一起了
+
+
+origin/master 和远程仓库保持一致的远程分支
+master 需要先更新master分支，然后再去提交origin/master
+
+理解为master不改变，origin/master就一直和远程仓库一样的
+
+git fetch
+git fetch 实际上将本地仓库中的远程分支更新成了远程仓库相应分支最新的状态。
+
+如果你还记得上一节课程中我们说过的，远程分支反映了远程仓库在你最后一次与它通信时的状态，git fetch 就是你与远程仓库通信的方式了！希望我说的够明白了，你已经了解 git fetch 与远程分支之间的关系了吧。
+
+
+git pull  == git fetch + git merge
+why : 先抓取更新再合并到本地分支
+
+历史遗留问题
+git pull --rebase; git push;
