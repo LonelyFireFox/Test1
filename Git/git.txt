@@ -11,6 +11,8 @@ git brach -d 删除分支
 git rebase b 后
 a就合并到b上一起了
 
+可以简化为 git rebase b  a  //将a合并到b中
+
 
 origin/master 和远程仓库保持一致的远程分支
 master 需要先更新master分支，然后再去提交origin/master
